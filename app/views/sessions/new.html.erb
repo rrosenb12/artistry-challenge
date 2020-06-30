@@ -1,0 +1,13 @@
+<h1>Log a Session</h1>
+
+<%= form_for @session do |f| %>
+<%= f.label :instrument_id %>
+<%= f.collection_select :instrument_id, @instruments, :id, :name %>
+
+<%= f.label :artist_id %>
+<%= f.collection_select :artist_id, @artists, :id, :name %>
+
+<%= f.label :session_type %>
+<%= f.text_field :session_type %>
+<%= f.submit %>
+<%end%>
